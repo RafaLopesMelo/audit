@@ -20,8 +20,8 @@ A modern, scalable, and cost-effective audit logging system built with TypeScrip
 ### Cloud Infrastructure
 - **AWS Lambda**: Serverless compute for cost-effective processing
 - **Amazon S3**: Scalable object storage for audit data
-- **AWS Athena**: Serverless interactive query service
-- **AWS Glue**: Data catalog and ETL service
+- **AWS Athena**: Serverless interactive query service, used for query a Glue Database
+- **AWS Glue**: Data catalog and ETL service, used to create a "S3 Database"
 - **Amazon SQS**: Message queuing for reliable processing
 - **AWS Secrets Manager**: Secure credential management
 
@@ -41,8 +41,7 @@ audit/
 │   │   ├── register/          # Lambda function for audit log ingestion
 │   │   └── report/            # AI-powered report generation service
 │   └── shared/                # Common utilities and domain logic
-├── infra/                     # Infrastructure as Code
-└── examples/                  # Usage examples
+└── infra/                     # Infrastructure
 ```
 
 ## 💰 Cost Efficiency
@@ -55,7 +54,6 @@ This audit system is designed with cost optimization in mind:
 - **No idle costs**: No charges when the system isn't being used
 
 ### Storage Optimization
-- **S3 Standard-IA**: Cost-effective storage for infrequently accessed audit data
 - **Athena**: Pay-per-query analytics with no infrastructure costs
 - **Efficient data formats**: Optimized data structures reduce storage costs
 
@@ -66,7 +64,6 @@ You can easily replace AI translations at any moment.
 
 ## 📊 Use Cases
 
-- **Compliance**: Meet regulatory requirements (GDPR, HIPAA, SOX)
 - **Security**: Track user actions and system changes
 - **Debugging**: Audit trail for troubleshooting
 - **Analytics**: Business intelligence from user behavior
