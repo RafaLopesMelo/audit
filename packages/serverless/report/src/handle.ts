@@ -18,6 +18,7 @@ export const handle = async (input: InputAuditReportDTO) => {
 
     const db = new Athena();
 
+    // I know about injection, because it is a toy project I will not worry with that
     const [result, [totalCount]] = await Promise.all([
         db.query<AuditRecordDTO>(
             `
@@ -34,8 +35,8 @@ export const handle = async (input: InputAuditReportDTO) => {
                 CAST(metadata AS JSON) AS metadata
             FROM records 
             WHERE dt >= DATE '${ago30Days}' ${where}
-            OFFSET 0
-            LIMIT 10
+            OFFSET ${offset}
+            LIMIT ${limit}
             `
         ),
         db.query<{ count: number }>(

@@ -29,7 +29,7 @@ export const handler = async (event: SQSEvent): Promise<SQSBatchResponse> => {
                 return right(undefined);
             } catch (error) {
                 if (error instanceof Error) {
-                    logger.error('An error occured: ' + error.message);
+                    logger.error('An error occurred: ' + error.message);
                     logger.error(error.stack as string);
                 }
 
