@@ -1,0 +1,45 @@
+{
+    "name": "/audit",
+    "version": "1.0.0",
+    "description": "Client library to create audit logs",
+    "repository": "https://github.com/RafaLopesMelo/audit",
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com/"
+    },
+    "main": "dist/index.esm.js",
+    "types": "dist/types/sdk/src/index.d.ts",
+    "scripts": {
+        "build": "rimraf dist && node build.mjs",
+        "test": "jest",
+        "lint": "eslint src/**/*.ts",
+        "format": "prettier --write \"src/**/*.ts\""
+    },
+    "keywords": [
+        "audit"
+    ],
+    "author": "RafaLopesMelo",
+    "license": "ISC",
+    "dependencies": {
+        "@aws-sdk/client-iam": "^3.826.0",
+        "@aws-sdk/client-sqs": "^3.826.0",
+        "@aws-sdk/client-ssm": "^3.826.0"
+    },
+    "module": "dist/index.esm.js",
+    "exports": {
+        ".": {
+            "types": "./dist/types/sdk/src/index.d.ts",
+            "import": "./dist/index.esm.js",
+            "require": "./dist/index.cjs.js"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "devDependencies": {
+        "tsc-alias": "^1.8.16",
+        "tsconfig-paths": "^4.2.0"
+    },
+    "engines": {
+        "node": ">=22.0.0"
+    }
+}

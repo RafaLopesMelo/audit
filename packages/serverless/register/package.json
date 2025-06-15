@@ -1,0 +1,26 @@
+{
+    "name": "@audit/register",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "start": "node dist/index.js",
+        "build": "node build.mjs"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@audit/shared": "workspace:*",
+        "@aws-sdk/client-athena": "^3.826.0",
+        "@aws-sdk/client-glue": "^3.826.0",
+        "@aws-sdk/client-s3": "^3.826.0",
+        "@aws-sdk/client-secrets-manager": "^3.826.0",
+        "aws-lambda": "^1.0.7",
+        "ulid": "^3.0.1"
+    },
+    "devDependencies": {
+        "@types/aws-lambda": "^8.10.149"
+    }
+}

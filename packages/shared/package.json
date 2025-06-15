@@ -1,0 +1,16 @@
+{
+    "name": "@audit/shared",
+    "scripts": {
+        "build": "echo 'No build needed for shared package'",
+        "test": "echo 'No tests in shared package'"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@aws-sdk/client-athena": "^3.826.0",
+        "@aws-sdk/client-glue": "^3.826.0",
+        "@aws-sdk/client-s3": "^3.826.0",
+        "@aws-sdk/client-secrets-manager": "^3.826.0"
+    }
+}
